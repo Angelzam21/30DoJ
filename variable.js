@@ -18,3 +18,8 @@ Now we'll declare the same variables but in a single line
 
 firstName = "Angel", isMarried = false, country = "Argentina", age = 27 // same line
 
+// DAY 2 EXERCISES 
+//LEVEL 1
+
+let challenge = "30 Days Of JavaScript"
+
