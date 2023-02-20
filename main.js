@@ -11,6 +11,13 @@ easy to reuse and informative
  console.log(challenge.toUpperCase())                             //printing all uppercase
  console.log (challenge.toLowerCase())                           //printing all lowercase
 
-console.log(challenge.substring(3,7))
-console.log(challenge.substring(3,21))
-console.log(challenge.includes("Script"))
+console.log(challenge.substring(3,7))           // extrayendo la palabra "days"                        
+console.log(challenge.substring(3,21))          // extrayendo la oracion "days of javascript"
+console.log(challenge.includes("Script"))       // verificando si esta la palabra "Script" en el string
+console.log(challenge.split(" "))               // separando el string en un array por los espacios
+console.log(itCompanies.split(","))                     // separando el string en un array por las comas
+console.log(challenge.replace('JavaScript','Python'))               // cambiando la palabra JavaScript por Python
+console.log(itArray)
+console.log(incomeTotal)
+console.log(loveCount)
+console.log(sentenceClean)
