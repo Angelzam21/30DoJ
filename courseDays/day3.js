@@ -60,5 +60,47 @@ if (minutes<10) {
 
 }
 
+//Exercises level 2.
 
+/*1. Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle 
+(area = 0.5 x b x h). */
 
+function areaTriangleFunction (){                                                                   //Ejercicio 1
+  let baseTriangle = prompt ("Ingrese base del triangulo","base del triangulo")
+  let heightTriangle = prompt ("Ingrese altura del triangulo","altura del triangulo")
+  
+  let areaTriangle = 0.5*baseTriangle*heightTriangle
+  console.log(`el area del triangulo es igual a: ${areaTriangle}`)
+  document.getElementById('resultadoAreaTriangulo').innerHTML = `El Area del triangulo es ${areaTriangle}cm<sup>2</sup>`;
+}
+
+/*Write a script that prompt the user to enter side a, side b, 
+and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c) */
+
+function perimeterTriangleFunction (){                                                                   //Ejercicio 2
+  let sideA = Number(prompt ("Ingrese lado a","lado a"))
+  let sideB = Number(prompt ("Ingrese lado b","lado b"))
+  let sideC = Number(prompt ("Ingrese lado c","lado c"))
+  
+  let perimeterTriangle = sideA+sideB+sideC
+  console.log(`el perimetro del triangulo es igual a: ${perimeterTriangle}`)
+  document.getElementById('resultadoPerimetroTriangulo').innerHTML = `El Perimetro del triangulo es ${perimeterTriangle}cm`;
+}
+
+/*Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
+*/
+
+function areaperimeterRectangleFunction (){                                                                   //Ejercicio 3
+  
+  let lengthRectangle = Number(prompt ("Ingrese altura del rectangulo",""))
+  let widthRectangle = Number(prompt ("Ingrese ancho del rectangulo",""))
+  let areaRectangle = lengthRectangle*widthRectangle
+  let perimeterRectangle = 2*(lengthRectangle+widthRectangle)
+
+  console.log(`el area del rectangulo es igual a: ${areaRectangle}`)
+  console.log(`el perimetro del rectangulo es igual a: ${perimeterRectangle}`)
+
+  document.getElementById('resultadoAreaRectangulo').innerHTML = `El Area del rectangulo es ${areaRectangle}cm<sup>2</sup>`
+  document.getElementById('resultadoPerimetroRectangulo').innerHTML = `El Perimetro del rectangulo es ${perimeterRectangle}cm`;
+
+}
