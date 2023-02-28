@@ -91,7 +91,6 @@ function perimeterTriangleFunction (){                                          
 */
 
 function areaperimeterRectangleFunction (){                                                                   //Ejercicio 3
-  
   let lengthRectangle = Number(prompt ("Ingrese altura del rectangulo",""))
   let widthRectangle = Number(prompt ("Ingrese ancho del rectangulo",""))
   let areaRectangle = lengthRectangle*widthRectangle
@@ -102,5 +101,35 @@ function areaperimeterRectangleFunction (){                                     
 
   document.getElementById('resultadoAreaRectangulo').innerHTML = `El Area del rectangulo es ${areaRectangle}cm<sup>2</sup>`
   document.getElementById('resultadoPerimetroRectangulo').innerHTML = `El Perimetro del rectangulo es ${perimeterRectangle}cm`;
+}
 
+/*Get radius using prompt and calculate the area of a circle (area = pi x r x r) and 
+circumference of a circle(c = 2 x pi x r) where pi = 3.14. */
+
+function areacircumferenceCircleFunction (){                                                              //Ejercicio 4
+  let radiusCircle = Number(prompt ("Ingrese radio del circulo",""))
+  const pi = 3.14
+  
+  let areaCircle = pi*radiusCircle*radiusCircle
+  let circumferenceCircle = 2*pi*radiusCircle
+
+  console.log(`el area del circulo es igual a: ${areaCircle}`)
+  console.log(`la circumferencia del circulo es igual a: ${circumferenceCircle}`)
+
+  document.getElementById('resultadoAreaCirculo').innerHTML = `El Area del circulo es ${areaCircle}cm<sup>2</sup>`
+  document.getElementById('resultadoCircumferenciaCirculo').innerHTML = `La Circumferencia del circulo es ${circumferenceCircle}cm`;
+}
+
+//creating a human readable time format. following: YYYY-MM-DD HH:mm eg. 2012-01-02 07:05
+// The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
+
+function dateTimeFormat (){    
+  const day = ('0'+time.getDate()).slice(-2)
+  const month = ('0'+time.getMonth()+1).slice(-2)
+  const year = time.getFullYear()
+  const hours = ('0'+time.getHours()).slice(-2)
+  const minutes = ('0'+time.getMinutes()).slice(-2)
+
+  console.log(`today is: ${year}-${month}-${day}  ${hours}:${minutes}`)
+  document.getElementById('dateTimeFormat').innerHTML = `today is: ${year}-${month}-${day}  ${hours}:${minutes}`
 }

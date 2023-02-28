@@ -41,10 +41,9 @@ let sentenceClean = sentence.replace(/\$|%|@|&|#|!|;|/gi,"")
 for (let row1 = 1; row1 < 6; row1++) {
     
     let row2 = 1
-    let row3 = row1
-    let row4 = row1*row2*row3
-    let row5 = row3*row4
+    let row4 = row1*row1
+    let row5 = row1*row4
 
-    console.log(row1+" "+(row2)+" "+(row3)+" "+(row4)+" "+(row5));
-  
+    console.log(row1+" "+(row2)+" "+(row1)+" "+(row4)+" "+(row5)+"\n")
+
   }
