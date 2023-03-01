@@ -124,7 +124,7 @@ function areacircumferenceCircleFunction (){                                    
 // The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
 
 function dateTimeFormat (){    
-  const day = ('0'+time.getDate()).slice(-2)
+  const day = ('0'+time.getDate()).slice(-2)       //utilizamos el slice(-2) para que siempre nos quede en formato de dos digitos
   const month = ('0'+time.getMonth()+1).slice(-2)
   const year = time.getFullYear()
   const hours = ('0'+time.getHours()).slice(-2)
