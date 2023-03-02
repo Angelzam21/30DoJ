@@ -28,3 +28,35 @@ function isitEvenFunction(){
         document.getElementById('isitEven').innerHTML = `the number ${number} is uneven` 
     }
 }
+
+//Write a code which can give grades to students according to theirs scores:
+//90-100, A .. 70-89, B .. 60-69, C .. 50-59, D .. 0-49, F
+function studentGradeFunction () {
+    let studentGrade = Number(prompt('enter student grade: '))
+    switch (true) {
+        case (studentGrade>=90 && studentGrade<=100):
+            console.log('your grade is: A')
+            document.getElementById('studentGrade').innerHTML = 'your grade is: A'
+            break;
+        case (studentGrade>=70 && studentGrade<90 ):
+            console.log('your grade is: B')
+            document.getElementById('studentGrade').innerHTML = 'your grade is: B'
+            break;  
+        case (studentGrade>=60 && studentGrade<70 ):
+            console.log('your grade is: C')
+            document.getElementById('studentGrade').innerHTML = 'your grade is: C'
+            break; 
+        case (studentGrade>=50 && studentGrade<60 ):
+            console.log('your grade is: D')
+            document.getElementById('studentGrade').innerHTML = 'your grade is: D'
+            break; 
+        case (studentGrade>=0 && studentGrade<50 ):
+            console.log('your grade is: F')
+            document.getElementById('studentGrade').innerHTML = 'your grade is: <b>F<b/>'
+            break;         
+        
+        default:
+            console.log('invalid student grade. Enter a grade between 0-100')
+            break;
+    }
+}
