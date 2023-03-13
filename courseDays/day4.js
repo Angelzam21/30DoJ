@@ -96,5 +96,61 @@ function checkSeasonFunction(){
         default:
         console.log('invalid input') 
     }
+}
 
+//Check if a day is weekend day or a working day. Your script will take day as an input.
+
+function checkIfWeekendFunction (){
+    let day = (prompt ("enter day", "monday")).toLowerCase()
+
+    switch (day) {
+        case 'saturday':
+        case 'sunday':    
+            console.log(day+'is a weekend day')
+            document.getElementById('checkIfWeekend').innerHTML=day+' is a weekend day'
+            break;
+        default:
+            console.log(day+'is a working day')
+            document.getElementById('checkIfWeekend').innerHTML=day+' is a working day'
+            break;
+    }
+}
+
+//Write a program which tells the number of days in a month.
+
+function daysInAMonthFunction(){
+    let month = (prompt("enter month")).toLowerCase()
+    let year = Number(prompt("enter year"))
+
+    switch (month) {
+        case'january':
+        case'march':
+        case'may':
+        case'july':
+        case'august':
+        case'october':
+        case'december':
+            console.log(month+' 31 days')
+            document.getElementById('daysInAMonth').innerHTML=month+' has 31 days'
+            break;
+        case'april':
+        case'june':
+        case'september':
+        case'november':
+        console.log(month+' 30 days')
+        document.getElementById('daysInAMonth').innerHTML=month+' has 30 days'
+            break;
+        case'february':
+            if (((year%4)==0)||((year%400)==0)) {  //checks if its a leap year
+                console.log(month+' 29 days')
+                document.getElementById('daysInAMonth').innerHTML=month+' has 29 days' 
+            } else {
+                console.log(month+' 28 days')
+                document.getElementById('daysInAMonth').innerHTML=month+' has 28 days'
+            }
+            break;
+        default:
+            console.log("invalid input")
+            break;
+    }
 }
