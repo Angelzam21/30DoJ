@@ -1,1 +1,0 @@
-console.log("las variables son del tipo: "+typeof stringVar,booleanVar,undefinedVar,nullVar)
