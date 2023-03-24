@@ -131,22 +131,24 @@ function daysInAMonthFunction(){
         case'october':
         case'december':
             console.log(month+' 31 days')
-            document.getElementById('daysInAMonth').innerHTML=month+' has 31 days'
+            document.getElementById('daysInAMonth').innerHTML=`${month} has 31 days`
             break;
         case'april':
         case'june':
         case'september':
         case'november':
         console.log(month+' 30 days')
-        document.getElementById('daysInAMonth').innerHTML=month+' has 30 days'
+        document.getElementById('daysInAMonth').innerHTML=`${month} has 30 days`
             break;
         case'february':
-            if (((year%4)==0)||((year%400)==0)) {  //checks if its a leap year
+            if (((year%4==0)&&(year%100!=0))||(year%400==00)) {  //checks if its a leap year
+                console.log("its a leap year")
                 console.log(month+' 29 days')
-                document.getElementById('daysInAMonth').innerHTML=month+' has 29 days' 
+                document.getElementById('daysInAMonth').innerHTML=`${month} has 29 days <br>${month} is a leap year` 
+                
             } else {
                 console.log(month+' 28 days')
-                document.getElementById('daysInAMonth').innerHTML=month+' has 28 days'
+                document.getElementById('daysInAMonth').innerHTML=`${month} has 28 days` 
             }
             break;
         default:
